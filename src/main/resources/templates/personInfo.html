@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о пользователях</title>
+</head>
+<body>
+<h1>Информация о пользователях</h1>
+<div th:each="person : ${person}">
+    <fieldset>
+        <legend>
+        <p th:text="'ID: ' + ${person.getId()}"></p>
+        </legend>
+        <p th:text="'login:' + ${person.getLogin()}"></p>
+        <p th:text="'password: ' + ${person.getPassword()}"></p>
+        <p th:text="'Роль: ' + ${person.getRole()}"></p>
+        <a th:href="@{/admin/person_info/{id}(id=${person.getId()})}">Изменить роль пользователя</a>
+    </fieldset>
+
+</div>
+</body>
+</html>

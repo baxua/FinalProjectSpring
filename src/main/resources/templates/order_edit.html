@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование товара</title>
+</head>
+<body>
+<h3>Редактирование товара</h3>
+<form th:method="POST" th:action="@{/admin/order_info/{id}(id=${order.getId()})}" th:object="${order}">
+
+    <label for="status">Выберите статус товара </label>
+    <select name="status" th:field="*{status}" id="status">
+        <div th:each="element : ${status}">
+            <option th:text="${element.name().toString()}" th:value="${element.values()}">
+        </div>
+    </select>
+    <div style="color: red" th:if="${#fields.hasErrors('status')}" th:errors="*{status}"></div>
+    <br>
+    <br>
+    <input type="submit" value="Редактировать">
+</form>
+</body>
+</html>

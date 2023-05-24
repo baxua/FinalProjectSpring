@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменить роль пользователя</title>
+</head>
+<body>
+<h1>Изменить роль пользователя</h1>
+<form th:method="POST" th:action="@{/admin/person_info/{id}(id=${person.getId()})}" th:object="${person}">
+    <label for="role">Введите роль пользователя: </label>
+    <input type="text" th:field="*{role}" placeholder="role" id="role">
+    <input type="submit" value="Сохранить">
+</form>
+</body>
+</html>
