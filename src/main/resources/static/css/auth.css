@@ -1,0 +1,98 @@
+body{
+    background-color: #c5e8f1;
+}
+
+h3{
+    font-size: 36px;
+    color: #15153d;
+    text-shadow: aqua;
+}
+
+label{
+    padding: 10px;
+    font-size: 26px;
+}
+#form{
+    background-color: #b2e5f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    width: 400px;
+    height: 200px;
+    border: solid 5px #4779a2;
+    box-shadow: 10px 5px 5px rgba(0, 0, 255, 0.48);
+
+    border-radius: 20px;
+}
+#reg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+}
+.input{
+    width: 120px;
+    height: 20px;
+}
+
+a{
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.submit{
+    background-color: #3b67a9;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.submitdiv{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    80% {
+        transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+.auth{
+    background-color: #3b67a9;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.auth:hover{
+    animation: bounce 1s;
+}
+.auth:visited{
+    color: white;
+}

@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Заказы:</title>
+    <link th:href="@{/css/order.css}" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div>
+<div class="search">
+
     <form th:method="POST" th:action="@{/orderInfo/search}">
-<label for="search">Поиск заказа по 4 последним буквам/цифрам заказа</label>
-<input type="text" id="search" name="search" th:value="*{value_search}">
-<br>
-<input type="submit" value="Найти">
+        <div>
+            <label class="searchLabel" style="font-size: 12px" for="search">Поиск заказа по 4 последним буквам/цифрам заказа</label>
+            <input class = "searchInput" type="text" id="search" name="search" th:value="*{value_search}">
+            <input class="searchButton" type="submit" value="Найти">
+        </div>
+
     </form>
 </div>
+<div class="result">
 <h3>Результат поиска</h3>
 <fieldset>
 <div th:each="order : ${search_order}">
@@ -23,14 +29,20 @@
         <p th:text="'Цена: ' + ${order.getPrice()}"></p>
         <p th:text="'Дата заказа: ' + ${#temporals.format(order.getDateTime(), 'dd-MMM-yyyy')}"></p>
         <p th:text="'Cтатус: ' + ${order.getStatus()}"></p>
-        <a th:href="@{/admin/order_info/{id}(id=${order.getId()})}">Изменить статус заказа</a>
+        <div>
+            <button class="button">
+                <a th:href="@{/admin/order_info/{id}(id=${order.getId()})}">Изменить статус заказа</a>
+            </button>
+        </div>
     </fieldset>
     <hr>
 </div>
 </fieldset>
-<h1>Заказы</h1>
+</div>
 
-<div th:each="order : ${orders}">
+<div>
+<h1>Заказы</h1>
+<div class="inf" th:each="order : ${orders}">
     <fieldset>
         <legend><h3 th:text="'Заказ №' + ${order.getNumber()}"></h3></legend>
         <p th:text="'Наименование: ' + ${order.getProduct().getTitle()}"></p>
@@ -38,9 +50,14 @@
         <p th:text="'Цена: ' + ${order.getPrice()}"></p>
         <p th:text="'Дата заказа: ' + ${#temporals.format(order.getDateTime(), 'dd-MMM-yyyy')}"></p>
         <p th:text="'Cтатус: ' + ${order.getStatus()}"></p>
+        <div>
+            <button class="button">
         <a th:href="@{/admin/order_info/{id}(id=${order.getId()})}">Изменить статус заказа</a>
+            </button>
+        </div>
     </fieldset>
-
+</div>
+</div>
 </div>
 </body>
 </html>
