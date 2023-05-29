@@ -1,0 +1,39 @@
+body{
+    background-color: #c5e8f1;
+}
+img{
+    border-radius: 10px;
+    transition: transform 1s;
+}
+img:hover {
+    transform: scale(1.5);
+
+}
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+p{
+    font-size: 20px;
+}
+.price{
+    color: darkkhaki;
+    font-size: 30px;
+}
+.name{
+    text-decoration: none;
+    font-size: 26px;
+    color: #4444bd;
+    overflow-wrap: break-word;
+}

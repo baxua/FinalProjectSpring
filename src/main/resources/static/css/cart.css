@@ -1,0 +1,62 @@
+body{
+    background-color: #c5e8f1;
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+img{
+    border-radius: 10px;
+}
+.name{
+    text-decoration: none;
+    font-size: 16px;
+    color: #4444bd;
+    cursor: pointer;
+    overflow-wrap: break-word;
+}
+.name:hover{
+    color: black;
+}
+.price{
+    color: darkkhaki;
+    font-size: 20px;
+}
+.button{
+    background-color: #3b67a9;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.button:visited{
+    color: white;
+}
+.button:hover{
+    background-color: #1b203d;
+    color: #e2cf9f;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    color: white;
+}
+.title{
+    font-size: 16px;
+    color: #4444bd;
+}
+.orders{
+    border: solid 2px rosybrown;
+    border-radius: 3px;
+    box-shadow: 2px 1px 3px 4px #3b67a9;
+}

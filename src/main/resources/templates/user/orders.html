@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Заказы</title>
+  <link th:href="@{/css/cart.css}" type="text/css" rel="stylesheet">
 </head>
 <body>
-<h3>Заказы</h3>
-<div th:each="order : ${orders}">
-  <h3 th:text="'Заказ №' + ${order.getNumber()}"></h3>
-  <img th:src="'/img/' + ${order.getProduct().getImageList()[0].getFileName()}" width="300px">
-  <p th:text="'Наименование: ' + ${order.getProduct().getTitle()}">
-  <p th:text="'Количество: ' + ${order.getCount()}">
-  <p th:text="'Цена: ' + ${order.getPrice()}">
-  <p th:text="'Дата заказа: ' + ${#temporals.format(order.getDateTime(), 'dd-MMM-yyyy')}"></p>
-  <p th:text="'Cтатус: ' + ${order.getStatus()}">
+<div>
+  <h3 style="font-size: 20px; text-align: center">Заказы</h3>
+  <div >
+    <div class="orders" th:each="order : ${orders}">
+      <h3 class="title" th:text="'Заказ №' + ${order.getNumber()}"></h3>
+      <img th:src="'/img/' + ${order.getProduct().getImageList()[0].getFileName()}" width="300px">
+      <p class="title" th:text="'Наименование: ' + ${order.getProduct().getTitle()}">
+      <p class="title" th:text="'Количество: ' + ${order.getCount()}">
+      <p class="price" th:text="'Цена: ' + ${order.getPrice()}">
+      <p class="title" th:text="'Дата заказа: ' + ${#temporals.format(order.getDateTime(), 'dd-MMM-yyyy')}"></p>
+      <p class="title" th:text="'Cтатус: ' + ${order.getStatus()}">
+    </div>
+  </div>
 </div>
 </body>
 </html>
