@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Редактирование товара</title>
 </head>
-<body>
+<body style="background-color: #c5e8f1; font-size: 18px">
 <h3>Редактирование товара</h3>
 <form th:method="POST" th:action="@{/admin/order_info/{id}(id=${order.getId()})}" th:object="${order}">
 

@@ -2,6 +2,7 @@ body{
     background-color: #c5e8f1;
 }
 img{
+    width: 250px;
     border-radius: 10px;
     transition: transform 1s;
 }
